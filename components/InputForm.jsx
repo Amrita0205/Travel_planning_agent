@@ -43,6 +43,29 @@ export default function InputForm({ onSubmit, loading }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (validateForm()) {
+      // Track travel search event
+      if (typeof window !== 'undefined') {
+        // Vercel Analytics event tracking
+        if (window.gtag) {
+          window.gtag('event', 'travel_search', {
+            origin: formData.origin,
+            destination: formData.destination,
+            duration: Math.ceil((new Date(formData.endDate) - new Date(formData.startDate)) / (1000 * 60 * 60 * 24)),
+            budget: formData.budget || 'not_specified'
+          })
+        }
+        
+        // Custom analytics tracking
+        console.log('Travel Search Event:', {
+          origin: formData.origin,
+          destination: formData.destination,
+          startDate: formData.startDate,
+          endDate: formData.endDate,
+          budget: formData.budget,
+          timestamp: new Date().toISOString()
+        })
+      }
+      
       onSubmit(formData)
     }
   }

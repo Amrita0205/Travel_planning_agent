@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'AI Travel Planner - Smart Trip Planning with AI',
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
             {children}
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   )

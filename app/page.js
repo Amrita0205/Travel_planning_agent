@@ -5,6 +5,7 @@ import WeatherCard from '../components/WeatherCard'
 import FlightCard from '../components/FlightCard'
 import ItineraryCard from '../components/ItineraryCard'
 import DestinationImages from '../components/DestinationImages'
+import AnalyticsDashboard from '../components/AnalyticsDashboard'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 export default function Home() {
@@ -112,6 +113,9 @@ export default function Home() {
                 {travelData.images && (
                   <DestinationImages images={travelData.images} />
                 )}
+
+                {/* Analytics Dashboard */}
+                <AnalyticsDashboard />
 
                 {/* Itinerary Card */}
                 <div className="glass-effect rounded-2xl p-6">
