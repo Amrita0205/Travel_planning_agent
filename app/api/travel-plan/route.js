@@ -381,7 +381,9 @@ async function getDestinationImages(destination) {
     const cleanDestination = destination.split(',')[0].trim()
     
     // Use Unsplash API to get destination images
-    const response = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(cleanDestination + ' travel tourism')}&per_page=3&orientation=landscape&client_id=YOUR_UNSPLASH_ACCESS_KEY`)
+    const UNSPLASH_KEY = process.env.UNSPLASH_ACCESS_KEY
+    if (!UNSPLASH_KEY) throw new Error('Missing UNSPLASH_ACCESS_KEY')
+    const response = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(cleanDestination + ' travel tourism')}&per_page=3&orientation=landscape&client_id=${UNSPLASH_KEY}`)
     
     if (!response.ok) {
       throw new Error('Failed to fetch images')

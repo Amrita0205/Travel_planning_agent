@@ -1,5 +1,6 @@
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
+import FloatingAnalyticsButton from '../components/FloatingAnalyticsButton'
 
 export const metadata = {
   title: 'AI Travel Planner - Smart Trip Planning with AI',
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
             {children}
           </div>
         </div>
+        <FloatingAnalyticsButton />
         <Analytics />
       </body>
     </html>
