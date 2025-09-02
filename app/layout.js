@@ -5,7 +5,6 @@ export const metadata = {
   description: 'Plan your perfect trip with AI-powered recommendations. Get personalized itineraries, real-time weather, and flight information all in one place.',
   keywords: 'travel planning, AI travel, trip planner, vacation planner, travel recommendations',
   authors: [{ name: 'AI Travel Planner Team' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'AI Travel Planner - Smart Trip Planning with AI',
@@ -20,6 +19,11 @@ export const metadata = {
   },
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -30,7 +34,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" 
           rel="stylesheet" 
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
       </head>
       <body className="min-h-screen gradient-bg antialiased">
         <div className="relative">
