@@ -34,61 +34,41 @@ export default function AnalyticsDashboard() {
         {/* Vercel Analytics */}
         <div className="bg-white/5 rounded-xl p-4">
           <h4 className="text-lg font-semibold text-white mb-3">🚀 Vercel Analytics</h4>
-          <p className="text-gray-300 mb-3">
-            Your site is already tracking visitors with Vercel Analytics!
-          </p>
-          <div className="space-y-2 text-sm text-gray-400">
-            <p>✅ Page views tracked</p>
-            <p>✅ Unique visitors counted</p>
-            <p>✅ Performance metrics monitored</p>
-            <p>✅ Real-time data available</p>
-          </div>
           <a 
             href="https://vercel.com/dashboard" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block mt-3 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+            className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+            title="Your site is already tracking visitors with Vercel Analytics! Page views tracked, unique visitors counted, performance metrics monitored, and real-time data available."
           >
-            View Vercel Dashboard →
+            View Vercel Dashboard (Page views, visitors, performance, real-time) →
           </a>
         </div>
 
         {/* Google Analytics Option */}
         <div className="bg-white/5 rounded-xl p-4">
           <h4 className="text-lg font-semibold text-white mb-3">🔍 Google Analytics (Optional)</h4>
-          <p className="text-gray-300 mb-3">
-            For detailed user behavior insights, add Google Analytics:
-          </p>
-          <div className="space-y-2 text-sm text-gray-400">
-            <p>1. Get GA4 Measurement ID</p>
-            <p>2. Add NEXT_PUBLIC_GA_ID to .env.local</p>
-            <p>3. Uncomment Google Analytics in layout.js</p>
-          </div>
           <a 
             href="https://analytics.google.com/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block mt-3 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+            className="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+            title="For detailed user behavior insights, add Google Analytics: 1. Get GA4 Measurement ID, 2. Add NEXT_PUBLIC_GA_ID to .env.local, 3. Uncomment Google Analytics in layout.js"
           >
-            Setup Google Analytics →
+            Setup Google Analytics (Get GA4 ID, add to .env.local, uncomment in layout.js) →
           </a>
         </div>
 
         {/* Custom Events */}
         <div className="bg-white/5 rounded-xl p-4">
           <h4 className="text-lg font-semibold text-white mb-3">🎯 Custom Event Tracking</h4>
-          <p className="text-gray-300 mb-3">
-            Your travel searches are being tracked with custom events:
-          </p>
-          <div className="space-y-2 text-sm text-gray-400">
-            <p>✅ Travel search events</p>
-            <p>✅ Origin/destination tracking</p>
-            <p>✅ Budget range analysis</p>
-            <p>✅ Duration preferences</p>
-          </div>
-          <p className="text-xs text-gray-500 mt-2">
-            Check browser console to see event logs
-          </p>
+          <button 
+            className="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+            title="Your travel searches are being tracked with custom events: Travel search events, origin/destination tracking, budget range analysis, duration preferences. Check browser console to see event logs."
+            onClick={() => console.log('Custom events: Travel searches, origin/destination, budget, duration')}
+          >
+            View Event Tracking (Travel searches, origin/destination, budget, duration) →
+          </button>
         </div>
 
         {/* Quick Stats */}
